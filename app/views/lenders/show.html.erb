@@ -1,0 +1,109 @@
+<h1>Lender Dashboard</h1>
+
+
+<div class="show-wrapper">
+  <h3>Name: <span><%= @lender.first_name %> <%= @lender.last_name %></span></h3>
+  <h3>Account Balance: <span>$<%= @lender.money %></span></h3>
+
+  <% if flash[:errors] %>
+      <% flash[:errors].each do |e| %>
+          <p class="error"><%= e %></p>
+      <% end %>
+  <% end %>
+
+  <div class="list-table-wrapper">
+    <h3>List of people in need of help:</h3>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Need Help For</th>
+        <th>Reason for Loan</th>
+        <th>Amount Needed</th>
+        <th>Amount Raised</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @borrowers_need_help.each do |user| %>
+          <tr>
+            <td><%= user.first_name %> <%= user.last_name %></td>
+            <td><%= user.purpose %></td>
+            <td><%= user.description %></td>
+            <td>$<%= user.money %></td>
+            <td>$<%= user.raised %></td>
+            <td>
+
+              <form action='/lend' method='post'>
+                <%= token_tag nil %>
+                <input type='hidden' name='lend[borrower_id]' value='<%= user.id %>'>
+                <label><%= select_tag "lend[amount]", options_for_select(lend_money, 25) %></label>
+                <input class='join-event-btn' type='submit' value='Lend'>
+              </form>
+
+
+
+
+
+
+
+
+
+
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+
+
+    <div class="list-table-wrapper">
+      <h3>List of people you lend money to:</h3>
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Need Help For</th>
+          <th>Reason for Loan</th>
+          <th>Amount Needed</th>
+          <th>Amount Raised</th>
+          <th>Amount Lent</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @display.each do |user| %>
+            <tr>
+              <td><%= user.first_name %> <%= user.last_name %></td>
+              <td><%= user.purpose %></td>
+              <td><%= user.description %></td>
+              <td>$<%= user.money %></td>
+              <td>$<%= user.raised %></td>
+              <td>$<%= user.id %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+</div>

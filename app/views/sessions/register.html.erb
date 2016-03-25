@@ -1,0 +1,78 @@
+<h1>Register</h1>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |e| %>
+        <p class="error"><%= e %></p>
+    <% end %>
+<% end %>
+
+
+
+
+<div class="wrapper">
+
+
+  <div class="register-wrapper">
+    <h2>Lender</h2>
+    <form action="/register_lender" method="post">
+      <%= token_tag nil %>
+      <label>First Name: <input type="text" name="register_lender[first_name]"></label>
+      <label>Last Name: <input type="text" name="register_lender[last_name]"></label>
+      <label>Email: <input type="text" name="register_lender[email]"></label>
+      <label>Money: <%= select_tag "register_lender[money]", options_for_select(start_money, 100) %></label>
+
+      <p>*Password must be at least 8 characters</p>
+      <label>Password: <input type="password" name="register_lender[password]"><br></label>
+      <label>Confirm Password: <input type="password" name="register_lender[password_confirmation]"><br></label>
+      <input type="submit" value="Register Account">
+    </form>
+    <br>
+    <a href="/login">Already a member? Login here</a>
+  </div>
+
+
+
+  <div class="register-wrapper-b">
+    <h2>Borrower</h2>
+    <form action="/register_borrower" method="post">
+      <%= token_tag nil %>
+      <label>First Name: <input type="text" name="register_borrower[first_name]"></label>
+      <label>Last Name: <input type="text" name="register_borrower[last_name]"></label>
+      <label>Email: <input type="text" name="register_borrower[email]"></label>
+      <label>Need Money For: <input type="text" name="register_borrower[purpose]"></label>
+      <label>Description: <textarea name="register_borrower[description]"></textarea></label>
+
+      <label>Amount Needed: <%= select_tag "register_borrower[money]", options_for_select(start_money, 5000) %></label>
+
+      <p>*Password must be at least 8 characters</p>
+      <label>Password: <input type="password" name="register_borrower[password]"><br></label>
+      <label>Confirm Password: <input type="password" name="register_borrower[password_confirmation]"><br></label>
+      <input type="submit" value="Register Account">
+    </form>
+
+    <br>
+    <a href="/login">Already a member? Login here</a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+

@@ -1,0 +1,49 @@
+// Place all the styles related to the Lenders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.show-wrapper{
+  //outline: 1px dotted red;
+  padding: 30px;
+
+
+}
+
+.show-wrapper span{
+  color: dodgerblue;
+}
+
+
+.list-table-wrapper{
+  margin-top: 60px;
+  //outline: 1px dotted blue;
+
+}
+
+
+.list-table-wrapper table{
+  //outline: 1px dotted green;
+  text-align: center;
+  width: 100%;
+}
+
+
+.list-table-wrapper th{
+  color: darkgray;
+  background-color: #F7F7F7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bolder;
+}
+
+
+
+.list-table-wrapper label{
+  display: inline-block; vertical-align: top;
+}
+
+
+.list-table-wrapper select{
+  width: 70px;
+}

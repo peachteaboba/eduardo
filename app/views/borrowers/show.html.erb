@@ -1,0 +1,49 @@
+<h1>Borrower Dashboard</h1>
+
+
+<div class="show-wrapper">
+  <h3>Name: <span><%= @borrower.first_name %> <%= @borrower.last_name %></span></h3>
+  <h3>Amount Needed: <span>$<%= @borrower.money %></span></h3>
+  <h3>Amount Raised: <span>$<%= @borrower.raised %></span></h3>
+
+
+
+
+  <div class="list-table-wrapper">
+    <h3>List of people who lent you money:</h3>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Amount Lent</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @display.each do |user| %>
+          <tr>
+            <td><%= user.first_name %> <%= user.last_name %></td>
+            <td><%= user.email %></td>
+            <td>$<%= user.id %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>

@@ -1,0 +1,150 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  font-family: 'Varela Round', sans-serif;
+}
+.wrapper{
+  outline: none;
+  min-width: 700px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.register-wrapper{
+  //width: 49%;
+  border: 1px solid blue;
+  display: inline-block; vertical-align: top;
+  text-align: right;
+  margin-right: 20px;
+  padding: 45px;
+  border-radius: 20px;
+}
+.register-wrapper-b {
+  //width: 49%;
+  border: 1px solid green;
+  display: inline-block; vertical-align: top;
+  text-align: right;
+  margin-right: 20px;
+  padding: 45px;
+  border-radius: 20px;
+}
+.register-wrapper h2{
+  //outline: 1px solid blue;
+  margin-top: 0;
+}
+.register-wrapper-b h2{
+  //outline: 1px solid blue;
+  margin-top: 0;
+}
+
+.register-wrapper-b textarea{
+  width: 125px;
+  height: 50px;
+}
+
+select{
+  width: 130px;
+}
+
+label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.register-wrapper-b a{
+  font-size: 0.8em;
+  display: block;
+  margin-top: 10px;
+}
+.register-wrapper a{
+  font-size: 0.8em;
+  display: block;
+  margin-top: 10px;
+}
+
+
+
+.login-wrapper{
+  //width: 49%;
+  border: 1px solid green;
+  display: inline-block; vertical-align: top;
+  text-align: right;
+  margin-left: 20px;
+  padding: 45px;
+  border-radius: 20px;
+}
+
+.login-wrapper h2{
+  //outline: 1px solid blue;
+  margin-top: 0;
+}
+
+.login-wrapper a{
+  font-size: 0.8em;
+  display: block;
+  margin-top: 10px;
+}
+
+
+
+
+input{
+  margin-left: 10px;
+}
+
+.error{
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logout{
+  display: inline-block; vertical-align: top;
+  //width: 200px;
+  height: 50px;
+
+  margin-right: 20px;
+  //outline: 1px dotted purple;
+
+  //margin-top: 20px;
+}
+
+.logout-btn{
+  //width: 130px;
+  height: 40px;
+  //line-height: 40px;
+  font-size: 1em;
+  border: 1px solid red;
+  background: transparent;
+  color: red;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 50px;
+}
+
+
+
+
+.top-bar{
+  float: right;
+  text-align: right;
+}
